@@ -1,33 +1,44 @@
-/* index.css */
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f3dbdb;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: rgba(207, 174, 174, 0.5);
+    color: black;
     text-align: center;
     padding: 1em;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
-nav {
+h1,
+h2,
+h5 {
+    text-align: center;
+}
+
+.Navbar {
     display: flex;
     justify-content: center;
-    background-color: #555;
-    padding: 0.5em;
-    font-style: italic;
+    padding: 1em 0;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    margin: 0 1em;
-    font-style: italic;
+.Navbar a {
+    color: black;
+    padding: 14px 16px; 
+    text-decoration: none; 
+    font-size: 18px; 
+}
+
+.Navbar a:hover {
+    background-color: #f1caca; 
+    transition: background-color 0.3s; 
+}
+
+.Navbar a.active {
+    background-color: #81767649; /
 }
 
 section {
@@ -44,24 +55,13 @@ form {
     position: relative; 
 }
 
-/* container for the background image within the form */
-.background-container {
-    position: absolute;
-    bottom: 0; 
-    right: 0; 
-    width: 100px;
-    height: 100px;
-    background-image: url('file:///C:/Users/tokolv/Documents/GitHub/Project%20My%20First%20Web/Images/bespokebyveronlogo.JPG');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 form label {
     display: block;
     margin-bottom: 8px;
 }
 
-form input {
+form input,
+form textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
@@ -77,21 +77,6 @@ form button {
     cursor: pointer;
 }
 
-div {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.center-image {
-    text-align: center;
-}
-
-.center-image img {
-    max-width: 100%;
-    height: auto;
-}
-
 .thumbnail-container {
     display: flex;
     justify-content: space-between;
@@ -100,7 +85,7 @@ div {
 }
 
 .thumbnail {
-    flex-basis: calc(33.33% - 20px);
+    flex-basis: calc(25% - 20px);
     box-sizing: border-box;
     margin-bottom: 20px;
 }
@@ -109,9 +94,44 @@ div {
     max-width: 100%;
     height: auto;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .thumbnail img:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
+}
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#Typing_Video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.transparent-box {
+    background-color: rgba(207, 174, 174, 0.5);
+    padding: 20px;
+    width: 50%; /* Adjust as needed */
+    position: relative;
+    align-items: center;
+    z-index: 1; /* Ensure the box is on top of the video */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
 }
